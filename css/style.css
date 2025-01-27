@@ -386,10 +386,7 @@ display: inline-block;
   .flex-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  .pull-left img{
-	width: 64px;
-	height: 64px;
-  }
+ 
 /* 
 .slides li img {
 	height: 520px;
