@@ -134,31 +134,41 @@ jQuery(document).ready(function($) {
         asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
     });
     const slidesWrapper = document.querySelector('.slides-wrapper');
-  const slides = document.querySelectorAll('.slide');
-  const prevButton = document.querySelector('.flex-prev');
-  const nextButton = document.querySelector('.flex-next');
-
-  let currentIndex = 0;
-
-  function updateSliderPosition() {
-    const offset = currentIndex * -100; // Each slide takes 100% width
-    slidesWrapper.style.transform = `translateX(${offset}%)`;
-  }
-
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1; // Loop to last slide
-    updateSliderPosition();
-  });
-
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0; // Loop to first slide
-    updateSliderPosition();
-  });
-
-  // Optional: Auto-slide every 5 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-    updateSliderPosition();
-  }, 5000);
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.flex-prev');
+    const nextButton = document.querySelector('.flex-next');
+    
+    let currentIndex = 0;
+    let slideInterval; // Variable to hold the interval ID
+    
+    function updateSliderPosition() {
+      const offset = currentIndex * -100; // Each slide takes 100% width
+      slidesWrapper.style.transform = `translateX(${offset}%)`;
+    }
+    
+    function startSlideInterval() {
+      // Clear any existing interval to prevent multiple intervals
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateSliderPosition();
+      }, 7000);
+    }
+    
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1; // Loop to last slide
+      updateSliderPosition();
+      startSlideInterval(); // Restart the interval
+    });
+    
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0; // Loop to first slide
+      updateSliderPosition();
+      startSlideInterval(); // Restart the interval
+    });
+    
+    // Start the initial interval
+    startSlideInterval();
+    
 
 });
