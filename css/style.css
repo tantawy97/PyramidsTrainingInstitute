@@ -931,8 +931,7 @@ img {
 
 .item-thumbs {
 	position: relative;
-	overflow: hidden;
-	margin-bottom: 30px;
+	margin-bottom:50px;
 	cursor: pointer;
 }
 
@@ -940,12 +939,11 @@ img {
 	width: 100%;
 }
 
-.item-thumbs .hover-wrap {
+.hover-wrap {
 	position: absolute;
 	display: block;
 	width: 100%;
 	height: 100%;
-
 	opacity: 0;
 	filter: alpha(opacity=0);
 
@@ -955,7 +953,38 @@ img {
 	transition: all 450ms ease-out 0s;
 
 }
-
+.item-thumbs h5 {
+	position: absolute;
+	bottom: 10px; 
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	width: 70%;
+	text-align: center	;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 5px 10px;
+	font-size: 14px;
+	border-radius: 5px;
+	z-index: 10;
+}
+.enroll {
+	position: absolute;
+	bottom: -40px; 
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	width: 70%;
+	text-align: center	;
+	padding: 5px 10px;
+	font-size: 14px;
+	border-radius: 5px;
+	z-index: 10;
+}
+.item-thumbs img {
+	width: 100% !important;
+	height: 250px !important;
+	object-fit: cover !important;
+}
 .item-thumbs:hover .hover-wrap,
 .item-thumbs.active .hover-wrap {
 	opacity: 1;
@@ -966,6 +995,10 @@ img {
 	-o-transform: rotate(0deg) scale(0.775) skew(1deg) translate(0px);
 	-ms-transform: rotate(0deg) scale(0.775) skew(1deg) translate(0px);
 }
+.item-thumbs:hover .enroll:hover ~ .hover-wrap {
+    opacity: 0 !important; /* Disable hover effect */
+    transform: none !important; /* Disable hover effect */
+}
 
 .item-thumbs .hover-wrap .overlay-img {
 	position: absolute;
@@ -973,9 +1006,9 @@ img {
 	height: 100%;
 	opacity: 0.80;
 	filter: alpha(opacity=80);
-
 	background: #770309;
 }
+
 
 .item-thumbs .hover-wrap .overlay-img-thumb {
 	position: absolute;
@@ -1203,8 +1236,9 @@ blockquote cite a:visited {
 }
 
 .btn-theme:hover {
-	color: rgba(216, 18, 101, 1);
-	background: #fff;
+	background: #770309;
+	opacity: 0.8;
+	color: white;
 }
 
 /* --- list style --- */
@@ -1862,7 +1896,8 @@ article .align-right {
 
 .fancybox-title-inside-wrap {
 	padding: 3px 30px 6px;
-	background: #61B331;
+	background: #770309;
+
 }
 
 .fancybox-nav span {
@@ -1906,10 +1941,7 @@ article .align-right {
 	float: left;
 }
 
-.contact .submit:hover {
-	background: #770309;
-	opacity: 0.8;
-}
+
 
 .done {
 	display: none;
