@@ -1031,7 +1031,7 @@ ul.portfolio-categ {
 }
 
 ul.portfolio-categ li {
-	margin: 0;
+	margin-bottom: 5px;
 	float: left;
 	list-style: none;
 	font-size: 13px;
