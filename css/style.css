@@ -209,12 +209,21 @@ header .navbar-nav>li>a {
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
 }
-
-
+/* 
+.dropdown-menu li a {
+	color: #fff !important;
+	
+} */
 .dropdown-menu li a:hover {
 	color: #fff !important;
+	opacity: 0.8;
 }
-
+@media (max-width: 768px) {
+	.dropdown-menu li a {
+		color: #fff !important;
+		
+	}
+}
 header .nav .caret {
 	border-bottom-color: #f5f5f5;
 	border-top-color: #f5f5f5;
