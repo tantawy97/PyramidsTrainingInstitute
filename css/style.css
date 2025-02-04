@@ -398,7 +398,7 @@ select.selectmenu {
 }
 
 .slide img {
-	object-fit: fill;
+	object-fit: cover;
 	width: 100%;
 	height: 520px;
 }
@@ -923,7 +923,7 @@ img {
 	display: block;
 }
 
-.work-nav #filters li a:hover {}
+/* .work-nav #filters li a:hover {} */
 
 .work-nav #filters li a.selected {
 	color: #DE5E60;
@@ -1055,7 +1055,7 @@ ul.portfolio-categ li a {
 	color: #087c51;
 }
 
-ul.portfolio-categ li.active {}
+/* ul.portfolio-categ li.active {} */
 
 ul.portfolio-categ li.active a {
 	color: #fff;
@@ -1502,7 +1502,7 @@ ul.team-detail li ul.social-network li i {
 	color: #fff;
 }
 
-.pricing-box-item.activeItem .pricing-heading h3 {}
+/* .pricing-box-item.activeItem .pricing-heading h3 {} */
 
 .pricing-box-item .pricing-heading h3 strong {
 	font-size: 28px;
@@ -2025,7 +2025,7 @@ textarea.error {
 
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus {
-		background-color: #40250B;
+		background-color: #d0ac6e;
 	}
 
 	.navbar-default .navbar-collapse,
