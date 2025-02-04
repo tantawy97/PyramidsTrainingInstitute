@@ -2246,7 +2246,7 @@ b {
 	}
 
 	.navbar-nav .dropdown-menu>li>a:hover {
-		color: #087c51 !important;
+		background-color: #087c51 !important;
 		/* Use !important only if absolutely necessary */
 	}
 
