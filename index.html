@@ -24,7 +24,7 @@
     <meta property="og:type" content="website">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/jcarousel.css" rel="stylesheet" />
+    <!-- <link href="css/jcarousel.css" rel="stylesheet" /> -->
     <link href="css/flexslider.css" rel="stylesheet" />
     <!-- <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet"> -->
     <link href="css/style.css" rel="stylesheet" />
@@ -384,6 +384,34 @@
             </div>
     </div>
     </section>
+    <section id="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="aligncenter">
+                        <h2 class="aligncenter">Gallery</h2>
+                        The world's largest selection of courses choose from 130,000 online video
+                        courses with new additions published every month
+                    </div>
+                    <br>
+                </div>
+            </div>
+    
+            <!-- Flexslider -->
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="img/slides/s1.jpg" alt=""></li>
+                    <li><img src="img/slides/s2.jpg" alt=""></li>
+                    <li><img src="img/slides/s3.jpg" alt=""></li>
+                    <li><img src="img/slides/s4.jpg" alt=""></li>
+                    <li><img src="img/slides/s5.jpg" alt=""></li>
+                </ul>
+                <button class="flex-prev">&#10094;</button>
+                <button class="flex-next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    
     <!-- <a href="mailto:example@example.com?subject=Course%20Enrollment&body=Hello%2C%0A%0AI'm%20interested%20in%20enrolling%20in%20the%20course%20on%20[Course%20Name].%20Could%20you%20please%20provide%20me%20with%20more%20details%3F%0A%0AThank%20you!">Email Us About Course Enrollment</a> -->
     <footer>
         <div class="container">
@@ -476,6 +504,30 @@
     <script src="js/animate.js"></script>
     <script src="js/custom.js"></script>
     <!-- <script src="js/owl-carousel/owl.carousel.js"></script> -->
+    <script>
+       $(document).ready(function() {
+    var slider = $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        directionNav: false, // Disable FlexSlider's built-in arrows
+        itemWidth: 250,
+        itemMargin: 10,
+        minItems: 1,
+        maxItems: 4,
+        move: 1,
+        slideshow: false
+    });
+
+    // Connect custom buttons to FlexSlider
+    $('.flex-prev').on('click', function() {
+        slider.flexslider('prev'); // Go to the previous slide
+    });
+
+    $('.flex-next').on('click', function() {
+        slider.flexslider('next'); // Go to the next slide
+    });
+});
+    </script>
 </body>
 
 </html>

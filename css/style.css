@@ -879,6 +879,7 @@ img {
 #events {
 	background-color: white;
 	padding: 40px 0 0;
+	margin-bottom: 20px;
 }
 
 #services {
@@ -2262,3 +2263,37 @@ b {
 		}
 	}
 }
+/* إضافة مسافة بين الصور */
+.flexslider .slides img {
+    width: 100%;
+    border-radius: 10px;
+    margin-right: 15px; /* مسافة بين الصور */
+    padding: 10px;
+}
+
+/* تخصيص أزرار السلايدر */
+.flex-direction-nav a {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.flex-direction-nav a:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* ضبط موقع الأسهم */
+.flex-direction-nav .flex-prev {
+    left: -60px; /* تعديل المسافة من اليسار */
+}
+
+.flex-direction-nav .flex-next {
+    right: -60px; /* تعديل المسافة من اليمين */
+}
+
