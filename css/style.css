@@ -1250,7 +1250,19 @@ blockquote cite a:visited {
 	opacity: 0.8;
 	color: white;
 }
+#register {
+	color: #fff;
+	background: #087c51;
+	border: 0;
+	/* padding: 12px 30px; */
+	font-weight: bold;
+}
 
+#register:hover {
+	background: #d0ac6e;
+	opacity: 0.8;
+	color: white;
+}
 /* --- list style --- */
 
 ul.general {
